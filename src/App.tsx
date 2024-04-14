@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Search from './Components/Search'
+import FilterFood from './Components/FilterFood'
+import Cardapio from './Components/Cardapio'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex w-full flex flex-col'>
+      <section className='w-full flex'>
+        <h1 className='w-1/3 text-center mt-11 font-kanitThin text-xl'>Pizzaria da Gigi Menu do dia &#128523;</h1>
+        <div className='w-1/3' />
+        <div className='w-1/3'>
+          <Search />
+        </div>
+      </section>
+      <section>
+          <FilterFood />
+          <Cardapio />
+      </section>
     </div>
   );
 }
